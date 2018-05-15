@@ -19,7 +19,7 @@ response = Unirest.post(
                                       prep_time: 90
                                     }
                         )
-puts JSON.pretty_generate(response.body)
+puts JSON.prettrey_generate(response.body)
 
 #UPDATE ACTION
 # recipe_id = 6

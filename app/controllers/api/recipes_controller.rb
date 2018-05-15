@@ -17,6 +17,7 @@ class Api::RecipesController < ApplicationController
                          ingredients: params[:ingredients],
                          directions: params[:directions],
                          prep_time: params[:prep_time]
+                         image_url: params[:id]
                          )
     @recipe.save
     render 'show.json.jbuilder'
@@ -30,6 +31,7 @@ class Api::RecipesController < ApplicationController
     @recipe.ingredients = params[:ingredients] || @recipe.ingredients
     @recipe.directions = params[:directions] || recipe.directions
     @recipe.prep_time = params[:prep_time] || recipe.prep_time
+    @recipe.imague_url = params[:imague_url] || recipe.imague_url
 
     @recipe.save
     render 'show.json.jbuilder'
